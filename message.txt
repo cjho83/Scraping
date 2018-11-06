@@ -1,4 +1,4 @@
-r $(PERSON_NAME),
+Dear $PERSON_NAME,
 
 This is a test messagge.
 

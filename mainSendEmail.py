@@ -30,7 +30,7 @@ def read_template(filename):
 
 
 def main():
-    MY_ADDRESS = 'cjho@live.com'
+    MY_ADDRESS = ''
     PASSWORD = ''
 
     # set up the SMTP server
