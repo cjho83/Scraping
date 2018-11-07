@@ -28,6 +28,7 @@ def read_template(filename):
         template_file_content = template_file.read()
     return Template(template_file_content)
 
+<<<<<<< HEAD
 def load_login_details():
     with open('login.txt', 'r', encoding='utf-8') as login_file:
         username = login_file.readline()
@@ -39,16 +40,27 @@ def main():
     #MY_ADDRESS = 'cjho@live.com'
     #PASSWORD = ''
     MY_ADDRESS, PASSWORD = load_login_details()
+=======
+
+def main():
+    MY_ADDRESS = ''
+    PASSWORD = ''
+>>>>>>> 6a93f98b36551a601833b715ff2fa05eb3a2e075
 
     # set up the SMTP server
     names, emails = get_contacts('mycontacts.txt')  # read contacts
     message_template = read_template('message.txt')
 
+<<<<<<< HEAD
     #s = smtplib.SMTP_SSL(host='smtp-mail.outlook.com', port=587)
     #s.starttls()
     #s.login(MY_ADDRESS, PASSWORD)
     s = smtplib.SMTP_SSL('smtp.gmail.com',465)
     s.ehlo()
+=======
+    s = smtplib.SMTP(host='smtp-mail.outlook.com', port=587)
+    s.starttls()
+>>>>>>> 6a93f98b36551a601833b715ff2fa05eb3a2e075
     s.login(MY_ADDRESS, PASSWORD)
 
     # For each contact, send the email:
@@ -67,7 +79,11 @@ def main():
         msg.attach(MIMEText(message, 'plain'))
 
         # send the message via the server set up earlier.
+<<<<<<< HEAD
         # s.send_message(msg)
+=======
+        s.send_message(msg)
+>>>>>>> 6a93f98b36551a601833b715ff2fa05eb3a2e075
 
         del msg
 

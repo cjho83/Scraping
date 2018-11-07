@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 r $PERSON_NAME,
+=======
+Dear $PERSON_NAME,
+>>>>>>> 6a93f98b36551a601833b715ff2fa05eb3a2e075
 
 This is a test messagge.
 
